@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+<style>
+table{
+	border-collapse:collapse;
+	width:90%;
+}
+
+th,td{
+	padding:9px;
+	text-align:left;
+	border-bottom:3px solid#ddd;
+}
+
+tr:nth-child(even){background-color:#f2f2f2}
+
+th{
+	background-color:#4CAF50;
+	color:white;
+	
+</style>	
+</head>
+<body>
+<form action="/buy/">
+<center>
+<table width = "600" border="1" cellpadding="1" cellspacing="1">
+<caption><h3>~List Of Products Selected ~</h3></caption>
+
+<tr>
+<th> P_Name </th>
+</tr>
+{% for o in list %}
+<tr>
+
+<td>{{o}}</td>
+
+<br>
+</tr>
+{%endfor%}
+
+</table>
+<br>
+
+<table width = "600" border="1" cellpadding="1" cellspacing="1">
+<tr>
+
+<th><center> Total Price</center></th>
+</tr>
+<tr>
+<td><center><b>{{price}}<b></center></td>
+
+</tr>
+</table>
+</center>
+<br>
+
+<center>
+<input type="submit" value="BUY">
+</center>
+</form>
+</body>
+</html>
